@@ -1,0 +1,12 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{title}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body py-5 text-center">
+    <i *ngIf="!check" class="fa fa-times error" aria-hidden="true"></i>
+    <i *ngIf="check" class="fa fa-check success" aria-hidden="true"></i>
+    <p class="m-0"><strong>{{errorMessage}}</strong></p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn py-2 preview" (click)="activeModal.close('Close click')">Close</button>
+  </div>

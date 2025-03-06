@@ -1,0 +1,15 @@
+.preview {
+   background-color: #0FB3F1;
+   color: white;
+}
+.success {
+   color: green;
+   font-size: 32px;
+   margin-bottom: 10px;
+}
+
+.error {
+   color: red;
+   font-size: 32px;
+   margin-bottom: 10px;
+}

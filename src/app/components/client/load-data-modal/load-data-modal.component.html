@@ -1,0 +1,37 @@
+<div class="modal-header">
+    <h4 class="modal-title"><strong>Select To Load Data</strong></h4>
+</div>
+<div class="modal-body">
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" value="csv" id="csv" (change)="onChange($event)">
+        <label class="form-check-label" for="csv" >
+            Upload CSV
+        </label>
+    </div>
+    <div class="modal-body" *ngIf="checkBox==='csv'">
+        <p class="text-center">Size should not exceed : <strong>50mb</strong></p>
+        <ngx-dropzone (change)="onSelect($event)" class="uploadFile" [multiple]="false" accept='text/csv'>
+            <ngx-dropzone-label>Drop your CSV File here or <a href="javascript:void(0)">Browse</a></ngx-dropzone-label>
+            <i class="fa fa-folder-open" aria-hidden="true"></i>
+            <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                <ngx-dropzone-label>{{ f.name }}</ngx-dropzone-label>
+            </ngx-dropzone-preview>
+        </ngx-dropzone>
+
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" value="database" id="database" checked
+            (change)="onChange($event)">
+        <label class="form-check-label" for="database">
+            Use Database
+        </label>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="onUpload()" [disabled]=" enableUpload() || isLoading  ">
+        <div class="spinner-border spinner-border-sm" role="status" *ngIf="isLoading">
+            <span class="sr-only">Loading...</span>
+        </div>Upload
+    </button>
+
+</div>

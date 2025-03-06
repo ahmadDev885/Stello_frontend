@@ -1,0 +1,66 @@
+.navbar {
+    box-shadow: 0 0 20px 0 rgb(21 47 95 / 20%);
+}
+.wrapper_con {
+    max-width: 1920px;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+.nav-item {
+    border-radius: 4px;
+}
+.nav-item .nav-link {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 10px;
+}
+.nav-item:hover .nav-link, .nav-item .nav-link.active {
+    color: #fff;
+    background-color: #0FB3F1;
+    border-radius: 4px;
+}
+.banner_sec {
+    background-color: #d5e7ff;
+}
+.banner_sec h2 {
+    color: #fff;
+    font: 600 32px 'Poppins', sans-serif;
+    color: #333333;
+    margin: 0;
+}
+
+.preview {
+    background-color: #0FB3F1;
+    color: white;
+}
+.pagination .page-link {
+    background-color: #0FB3F1;
+    color: white;
+    cursor: pointer;
+}
+.disabled>.page-link, .page-link.disabled {
+    color: #e7e7e7;
+}
+
+.pagination .page-link:hover {
+    background-color: #0098f0;
+    color: white;
+}
+.section_temp {
+    background-color: #e9ecef;
+ }
+ .section_temp .temp_btn {
+    width: 200px;
+    color: #212529;
+ }
+ .section_temp .temp_btn:focus {
+    box-shadow: none;
+ }
+ .section_temp .temp_btn:hover {
+    color: #fff
+ }
+

@@ -1,0 +1,8 @@
+<div class="temp_inner">
+    <ul *ngIf="!isTemplatesLoading" #list>
+        <li *ngFor="let data of templates;index as i" (click)="selectedTemplate(i,data)" [ngClass]="{'selected': status === i}"><a href="javascript:void(0)">{{data.message}}</a></li>
+    </ul>
+    <div class="text-end">
+        <button class="btn btn-success temp_insert" (click)="onSelect()" [disabled]="!selected" >Insert template</button>
+    </div>
+</div>

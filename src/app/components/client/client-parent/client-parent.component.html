@@ -1,0 +1,48 @@
+<section class="bg-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="steps clearfix">
+                    <ul role="tablist">
+                        <li role="tab" [ngClass]="stageOne ?  'first done' : 'first done current'" aria-disabled="false"
+                            aria-selected="false">
+                            <a id="signup-form-t-0" aria-controls="signup-form-p-0">
+                                <div class="title"><span class="title-text">
+                                        Contact
+                                    </span><span class="title-number">01</span></div>
+                            </a>
+                        </li>
+                        <li role="tab" [ngClass]="stageTwo ? 'done' : 'done current'" aria-disabled="false"
+                            aria-selected="true">
+                            <a id="signup-form-t-1" aria-controls="signup-form-p-1"><span class="current-info audible">
+                                </span>
+                                <div class="title"><span class="title-text">
+                                        Message
+                                    </span><span class="title-number">02</span></div>
+                            </a>
+                        </li>
+                        <li role="tab" [ngClass]="stageThree ? 'disabled last' : 'disabled last current'"
+                            aria-disabled="true">
+                            <a id="signup-form-t-2" aria-controls="signup-form-p-2">
+                                <div class="title"><span class="title-text">
+                                        Confirm
+                                    </span><span class="title-number">03</span></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <ul class="list-inline py-3 m-0">
+                    <li [ngClass]="stageOne ? 'list-inline-item ' : 'list-inline-item active'">Contact</li>
+                    <li  [ngClass]="stageTwo ? 'list-inline-item ' : 'list-inline-item active'">Message</li>
+                    <li  [ngClass]="stageThree ? 'list-inline-item ' : 'list-inline-item active'">Confirm</li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+
+</section>
+<app-contact (sendContacts)="getSelectedContacts($event)" [hidden]="stageOne" [rowData]="rowData"></app-contact>
+<app-create-message [hidden]="stageTwo" (toContacts)="backToContacts($event)" (messageBody)="getMessageBody($event)">
+</app-create-message>
+<app-preview [hidden]="stageThree" (toMessages)="backToMessage($event)" [previewData]="messageDetails"
+    (broadcastMessages)="broadcastMessage($event)"></app-preview>

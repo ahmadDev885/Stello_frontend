@@ -1,0 +1,42 @@
+<div class="main">
+   <section class="banner_sec text-center py-3">
+      <div class="col-12">
+         <h2>Campaigns List</h2>
+      </div>
+   </section>
+
+   <div class="container-fluid my-3 px-5">
+      <div class="row">
+         <!-- <div class="col-6">
+               <div class="uploadCsv text-end">
+                   <button type="button" class="btn preview">Preview Message</button>
+               </div>
+           </div> -->
+
+
+         <div class="col-12">
+            <!-- <div class="uploadCsv text-end">
+               <button type="button" class="btn preview"><i class="fa fa-plus" aria-hidden="true"></i> Create New Campaigns</button>
+            </div> -->
+         </div>
+         <div class="col-12">
+            <!-- This space is empty for Text Editor content -->
+            <div class="container-fluid mt-4">
+               <div class="text-center" *ngIf="isLoading">
+                  <div class="spinner-border" role="status">
+                     <span class="sr-only">Loading...</span>
+                  </div>
+               </div>
+               <div *ngIf="errorStatus" class="text-center">
+                  <h1>
+                     {{errorMessage}}
+                  </h1>
+               </div>
+               <app-ag-grid *ngIf="!isLoading && !errorStatus" [paginationPageSize]="paginationPageSize"
+                  [listData]="rowData" [header]="columnDefs" [hgt]="agGridHeight">
+               </app-ag-grid>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

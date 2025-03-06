@@ -1,0 +1,199 @@
+.navbar {
+  box-shadow: 0 0 20px 0 rgb(21 47 95 / 20%);
+}
+
+.wrapper_con {
+  max-width: 1920px;
+  padding: 0 5%;
+  margin: 0 auto;
+  width: 100%;
+}
+.preview {
+  background-color: #0FB3F1;
+  color: white;
+}
+
+.nav-item {
+  border-radius: 4px;
+}
+
+.nav-item .nav-link {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.nav-item:hover .nav-link,
+.nav-item .nav-link.active {
+  color: #fff;
+  background-color: #0FB3F1;
+  border-radius: 4px;
+}
+
+.banner_sec {
+  background-color: #d5e7ff;
+}
+
+.banner_sec h2 {
+  color: #fff;
+  font: 600 32px 'Poppins', sans-serif;
+  color: #333333;
+  margin: 0;
+}
+
+
+.pagination .page-link {
+  background-color: #0FB3F1;
+  color: white;
+  cursor: pointer;
+
+}
+
+.disabled>.page-link,
+.page-link.disabled {
+  color: #e7e7e7;
+}
+
+.pagination .page-link:hover {
+  background-color: #0098f0;
+  color: white;
+}
+
+.iphone-device {
+  width: 300px;
+  height: 615px;
+  background: #fff;
+  border-radius: 45px;
+  border: 2px solid rgba(0, 0, 0, .3);
+  box-sizing: border-box;
+  box-shadow: inset 0 0 8px rgb(0 0 0 / 30%);
+  padding: 70px 20px 20px 20px;
+  position: relative;
+}
+
+.inner {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 6px;
+  border-radius: 10px;
+  background: #c9c9c9;
+  box-sizing: border-box;
+}
+
+.inner:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 55px;
+  background: #c9c9c9;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.iphone-device .device-content {
+  color: #aaaaaa;
+}
+
+.iphone-device p {
+  font-size: 14px;
+}
+
+.iphone-device ul {
+  padding-left: 20px;
+}
+
+.iphone-device ul li {
+  font-size: 12px;
+}
+
+.mac-device {
+  width: 100%;
+  height: 615px;
+  background: #fff;
+  border-radius: 45px;
+  border: 2px solid rgba(0, 0, 0, .3);
+  box-sizing: border-box;
+  box-shadow: inset 0 0 8px rgb(0 0 0 / 30%);
+  padding: 30px 30px 30px 30px;
+  position: relative;
+}
+
+.mac-device .heading {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.mac-device .device-content-inner {
+  padding: 20px 0px;
+  color: #aaaaaa;
+}
+
+.mac-device .device-content-inner>p {
+  margin-bottom: 6px;
+}
+
+.mac-device .device-content-inner .subject-content {
+  border: 1px solid #e7e7e7;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.mac-device .device-content-inner .subject-content>p {
+  margin: 0;
+}
+
+.mac-device .device-content-inner .message-content {
+  border: 1px solid #e7e7e7;
+  padding: 10px;
+  margin: 15px 0;
+  height: 335px;
+}
+
+@media only screen and (max-width: 768px) {
+  .mac-device {
+    height: 415px;
+  }
+  .mac-device .device-content-inner .message-content {
+    height: 155px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .mac-device {
+    height: 355px;
+    padding: 20px;
+  }
+  .mac-device .heading {
+    padding-bottom: 4px;
+  }
+  .mac-device .heading h5 {
+    font-size: 16px;
+  }
+  .mac-device .device-content-inner {
+    padding: 10px 0px;
+  }
+  .mac-device .device-content-inner .message-content {
+    height: 155px;
+  }
+  .mac-device .device-content-inner > p {
+    font-size: 12px;
+  }
+  .mac-device .device-content-inner .subject-content {
+    padding: 5px;
+    margin: 7px 0;
+    font-size: 12px;
+  }
+  .mac-device .device-content-inner .message-content {
+    padding: 5px;
+    margin: 7px 0;
+    height: 175px;
+    font-size: 12px;
+  }
+}

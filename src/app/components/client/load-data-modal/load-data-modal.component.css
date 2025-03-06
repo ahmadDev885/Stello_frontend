@@ -1,0 +1,12 @@
+.uploadFile {
+    background: #F9F9FB;
+    border: 2px dashed rgba(0, 0, 0, 0.15);
+    border-radius: 27px;
+    flex-flow: column-reverse;
+     justify-content: center;
+     height: 230px;
+ }
+ .uploadFile i {
+    font-size: 32px;
+    color: #fccf6d;
+ }

@@ -1,0 +1,40 @@
+.navbar {
+   box-shadow: 0 0 20px 0 rgb(21 47 95 / 20%);
+}
+.wrapper_con {
+   max-width: 1920px;
+   padding: 0;
+   margin: 0 auto;
+   width: 100%;
+}
+.nav-item {
+   border-radius: 4px;
+}
+.nav-item .nav-link {
+   font-size: 16px;
+   font-weight: 600;
+   line-height: 24px;
+   letter-spacing: 0em;
+   text-align: left;
+   margin-left: 10px;
+}
+.nav-item:hover .nav-link, .nav-item .nav-link.active {
+   color: #fff;
+   background-color: #0FB3F1;
+   border-radius: 4px;
+}
+.banner_sec {
+   background-color: #d5e7ff;
+}
+.banner_sec h2 {
+   color: #fff;
+   font: 600 32px 'Poppins', sans-serif;
+   color: #333333;
+   margin: 0;
+}
+
+.preview {
+   background-color: #0FB3F1;
+   color: white;
+}
+

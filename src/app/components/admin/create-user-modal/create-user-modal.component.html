@@ -1,0 +1,68 @@
+<div class="modal-header">
+   <h4 class="modal-title">Create User</h4>
+   <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body py-4">
+   <form class="row g-3" [formGroup]="createForm" (ngSubmit)="onSubmit()">
+      <div class="col-md-12">
+         <input type="text" class="form-control" id="inputName1" placeholder="First Name" formControlName="first_name">
+         <span class="text-danger"
+            *ngIf="createForm.hasError('required','first_name') && createForm.controls['first_name'].touched">*First
+            Name
+            is required</span>
+
+         <span class="text-danger" *ngIf="createForm.hasError('maxlength','first_name')">*Max Character limit
+            exceeded</span>
+         <!-- <span class="text-white">*Name is required</span> -->
+      </div>
+
+      <div class="col-md-12">
+         <input type="text" class="form-control" id="inputName2" placeholder="Last Name" formControlName="last_name">
+         <span class="text-danger"
+            *ngIf="createForm.controls['last_name'].touched && createForm.hasError('required','last_name')">*Last Name
+            is required</span>
+            <span class="text-danger" *ngIf="createForm.hasError('maxlength','last_name')">*Max Character limit
+               exceeded</span>
+         <!-- <span class="text-white">*Name is required</span> -->
+      </div>
+      <div class="col-md-12">
+         <input type="text" class="form-control" id="inputUsername3" placeholder="Username" formControlName="email">
+         <span class="text-danger"
+            *ngIf="createForm.controls['email'].touched && createForm.hasError('required','email') || createForm.hasError('email','email')">*Email Name
+            is required</span>
+         <!-- <span class="text-white">*Username is required</span> -->
+      </div>
+      <div class="col-12">
+         <input type="password" class="form-control" id="inputPassword" placeholder="Password"
+            formControlName="password">
+         <span class="text-danger"
+            *ngIf="createForm.controls['password'].touched && createForm.hasError('required','password')">*Password
+            is required</span>
+
+            <span class="text-danger" *ngIf="createForm.hasError('maxlength','password')">*Max Character limit
+               exceeded</span>
+         <!-- <span class="text-white">*Password is required</span> -->
+      </div>
+      <div class="col-12">
+         <input type="password" class="form-control" id="inputCofirmPassword" placeholder="Confirm Password"
+            formControlName="confirm_password" (blur)="confirmPassowrd()" (focus)="confirmPassowrd()">
+         <span class="text-danger" *ngIf="confirmPasswordError">*{{confirmPasswordError}}</span>
+         <!-- <span class="text-dark"
+            *ngIf="createForm.controls['confirm_password'].dirty && createForm.hasError('required','confirm_password')">*Confirm Password Name
+               is required</span> -->
+      </div>
+      <div class="text-center text-white"></div>
+      <div class="col-12">
+         <button type="submit" class="btn preview w-100"
+            [disabled]="!(createForm.valid && confirmPasswordCheck) || isLoading">
+            <div class="spinner-border spinner-border-sm" role="status" *ngIf="isLoading">
+               <span class="sr-only">Loading...</span>
+            </div>
+            Create User
+         </button>
+      </div>
+   </form>
+</div>
+<!-- <div class="modal-footer">
+   <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div> -->

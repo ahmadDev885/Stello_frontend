@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg sticky-top bg-white">
+    <div class="container-fluid">
+        <a class="navbar-brand ms-4" (click)="toHome()"><img src="../../../assets/images/logo.png" height="60"
+                alt="Website Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link px-3 "  aria-current="page" [routerLinkActive]="['active']" [routerLink]="['/admin']" 
+                    [hidden]="!is_admin"
+                    >User List</a>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link px-3 "  aria-current="page" [routerLinkActive]="['active']" [routerLink]="['/client/campaign']" 
+                    [hidden]="is_admin"
+                    >Campaign List</a>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link px-3 " aria-current="page" [routerLinkActive]="['active']" [routerLink]="['/client/new']" 
+                    >Add Campaign</a>
+
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link px-3"  (click)="toMessage()" [routerLinkActive]="['active']" [routerLink]="['/client/message']" 
+                    [hidden]="is_admin" >Message</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" (click)="toPreview()" [routerLinkActive]="['active']" [routerLink]="['/client/preview']"
+                    [hidden]="is_admin">Confirm</a>
+                </li> -->
+                <li class="nav-item" ngbDropdown >
+                    <a class="nav-link"  ngbDropdownToggle><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i></a>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu dropdown-menu-end">
+                        <button ngbDropdownItem (click)="Logout()">Logout</button>
+                      </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

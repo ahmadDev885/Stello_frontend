@@ -1,0 +1,95 @@
+<div class="main">
+    <section class="banner_sec text-center py-3">
+        <div class="col-12">
+            <h2>Create Message</h2>
+        </div>
+    </section>
+
+    <div class="container-fluid my-3 px-5">
+        <div class="row">
+            <div class="col-6 d-flex align-items-center">
+                <div class="form-check me-4">
+                    <input class="form-check-input" type="checkbox" value="sms" id="sms" (change)="smsCheck()">
+                    <label class="form-check-label" for="sms">
+                        SMS
+                    </label>
+                </div>
+                <div class="form-check me-4">
+                    <input class="form-check-input" type="checkbox" value="email" id="email" (change)="emailCheck()">
+                    <label class="form-check-label" for="email">
+                        Email
+                    </label>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Email Subject (enabled if checked)"
+                        [disabled]="!is_email" [(ngModel)]="subject" aria-label="Email Subject (enabled if checked)"
+                        aria-describedby="button-addon2">
+                </div>
+            </div>
+            <!-- <div class="col-6">
+                <div class="uploadCsv text-end">
+                    <button type="button" class="btn preview">Preview Message</button>
+                </div>
+            </div> -->
+
+            <div class="col-6">
+                <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                            <a class="page-link" (click)="toContact()" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item">
+                            <button class="page-link" (click)="setMessageContent()" [disabled]="!data || !(is_email || is_sms)">Next</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-12">
+                <!-- This space is empty for Text Editor content -->
+                <ckeditor *ngIf="!isTagsLoading" [editor]="Editor" [(ngModel)]="data" [config]="{
+                    toolbar: {
+                        items: [
+                            'heading',
+                            '|',
+                            'bold',
+                            'italic',
+                            'link',
+                            'bulletedList',
+                            'numberedList',
+                            '|',
+                            'indent',
+                            'outdent',
+                            '|',
+                            'undo',
+                            'redo'
+                        ]
+                    },
+                    mention: {
+                    feeds: [
+                        {
+                            marker: '@',
+                            feed: feed,
+                            minimumCharacters: 1
+                        }
+                    ]
+                }
+            }">
+                </ckeditor>
+            </div>
+
+            <div class="col-12">
+                <div class="section_temp px-3 py-2">
+                    
+                        <ng-template #popContent >
+                            <app-templates-dropdown [isTemplatesLoading]="isTemplatesLoading" [templates]="templates" (emitTemplate)="getTemplate($event,p)" >
+                            </app-templates-dropdown>
+                        </ng-template>
+                    
+
+                    <button type="button" class="btn btn-outline-secondary temp_btn" [ngbPopover]="popContent" 
+                        [autoClose]="'outside'"  #p="ngbPopover"><i class="fa fa-files-o me-2" aria-hidden="true" ></i> Templates</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

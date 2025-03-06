@@ -1,0 +1,43 @@
+<div class="modal-header">
+   <h4 class="modal-title">Edit User</h4>
+   <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body py-5 px-3">
+   <form class="row g-3" [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="col-md-12">
+         <input type="text" class="form-control" id="inputName1" placeholder="First Name" formControlName="first_name">
+         <span class="text-danger"
+            *ngIf="editForm.controls['first_name'].dirty && editForm.hasError('required','first_name')">*First Name
+               is required</span>
+
+               <span class="text-danger" *ngIf="editForm.hasError('maxlength','first_name')">*Max Character limit
+                  exceeded</span>
+         <!-- <span class="text-white">*Name is required</span> -->
+      </div>
+      <div class="col-md-12">
+         <input type="text" class="form-control" id="inputName2" placeholder="Last Name" formControlName="last_name">
+         <span class="text-danger"
+            *ngIf="editForm.controls['last_name'].dirty && editForm.hasError('required','last_name')">*Last Name
+               is required</span>
+
+               <span class="text-danger" *ngIf="editForm.hasError('maxlength','last_name')">*Max Character limit
+                  exceeded</span>
+         <!-- <span class="text-white">*Name is required</span> -->
+      </div>
+      <div class="col-md-12">
+         <input type="text" class="form-control py-2" id="inputUsername4" placeholder="Username" formControlName="email">
+         <!-- <span class="text-white">*Username is required</span> -->
+      </div>
+      <div class="text-center text-white"></div>
+      <div class="col-12">
+         <button type="submit" class="btn py-2 preview w-100"  [disabled]="!editForm.valid || isLoading">
+            <div class="spinner-border spinner-border-sm" role="status" *ngIf="isLoading">
+               <span class="sr-only">Loading...</span>
+            </div>
+             Update User</button>
+      </div>
+   </form>
+</div>
+<!-- <div class="modal-footer">
+   <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div> -->

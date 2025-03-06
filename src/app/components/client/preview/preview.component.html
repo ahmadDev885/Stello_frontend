@@ -1,0 +1,70 @@
+<div class="main">
+   <section class="banner_sec text-center py-3">
+      <div class="col-12">
+         <h2>Preview and Confirm</h2>
+
+      </div>
+   </section>
+
+   <div class="wrapper_con my-3">
+      <div class="row">
+         <!-- <div class="col-6">
+            <div class="uploadCsv">
+               <button type="button" class="btn btn-success">Upload as CSV</button>
+            </div>
+         </div> -->
+         <div class="col-6">
+            <nav aria-label="...">
+               <ul class="pagination">
+                  <li class="page-item">
+                     <a class="page-link" (click)="toMessage()" tabindex="-1">Previous</a>
+
+                  </li>
+                  <!-- <li class="page-item">
+                     <button type="button" class="btn preview text-end">Broadcast Message</button>
+
+                  </li> -->
+                  <!-- <li class="page-item">
+                     <a class="page-link" href="#">Next</a>
+                  </li> -->
+               </ul>
+            </nav>
+         </div>
+         <div class="col-6">
+            <div class="uploadCsv text-end">
+               <button type="button" class="btn preview" (click)="broadcastMessage()">Broadcast Message</button>
+            </div>
+      </div>
+         <div class="col-12 col-lg-4 d-flex justify-content-center mb-4 mb-lg-0">
+            <div class="iphone-device">
+               <div class="inner"></div>
+               <div class="device-content">
+                  <div *ngIf="previewData && previewData.is_sms" [innerHtml]="previewData.message"></div>
+               </div>
+            </div>
+         </div>
+         <div class="col-12 col-lg-8">
+            <div class="mac-device">
+               <div class="device-content">
+                  <div class="heading">
+                     <h5>New email</h5>
+                  </div>
+                  <div class="device-content-inner">
+                     <p>To: <span *ngIf="previewData && previewData.emails[0]">{{previewData.emails[0]}}</span> 
+                        <span *ngIf="previewData && previewData.emails[1]">, {{previewData.emails[1]}}</span>
+                        <span *ngIf="previewData && previewData.emails[2]">, {{previewData.emails[2]}}</span>
+                        <span *ngIf="previewData && previewData.emails.length>3">, . . .</span>
+                     </p>
+                     <div class="subject-content">
+                        <p *ngIf="previewData">Subject: {{previewData.subject}} </p> 
+                     </div>
+                     <div class="message-content">
+                        <div *ngIf="previewData && previewData.is_email" [innerHtml]="previewData.message">  </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> 
+      </div>
+   </div>
+</div>

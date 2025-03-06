@@ -1,0 +1,150 @@
+nav .navbar-brand {
+    color: #55ABCD;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    cursor: pointer
+}
+
+.wrapper_con {
+    max-width: 1920px;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+.leftSide {
+    margin: auto 0;
+    display: table-cell;
+    vertical-align: middle;
+    height: calc(100vh - 72px);
+    padding: 0 100px;
+    background-image: url('../../../assets/images/student-online.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.leftSide .logo img {
+    margin-bottom: 30px;
+}
+
+.leftSide .heading h2 {
+    font-weight: 700;
+    letter-spacing: 0.8999999761581421px;
+    text-align: left;
+    color: #333333;
+}
+
+.leftSide .heading p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 25px;
+    color: #808996;
+}
+
+
+.comment-body .comment__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #333333;
+    margin-right: 30px;
+    margin-bottom: 0px;
+
+}
+
+.star-rating-wrap .star-rating {
+    font-size: 18px;
+}
+
+.star-rating-wrap .star-rating span i {
+    color: #f9b851 !important;
+}
+
+.text-color-5 {
+    color: #f9b851 !important;
+}
+
+.comment-body .comment-desc {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #808996;
+
+}
+
+
+.demo-form {
+    background: linear-gradient(164.59deg, #299FCF -2.16%, #328EB3 39.4%, #348AAD 47.57%, #7ED2F3 97.36%);
+    margin: auto 0;
+    display: table-cell;
+    vertical-align: middle;
+    height: calc(100vh - 72px);
+    padding: 0 100px;
+
+}
+.demo-form h2 {
+    font-weight: 700;
+    letter-spacing: 0.8999999761581421px;
+    text-align: left;
+    color: #BFEDFf;
+}
+.demo-form p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #e1e1e1;
+    margin-bottom: 35px;
+}
+.demo-form input {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 32px;
+    box-shadow: 0 0 40px rgb(82 85 90 / 10%);
+}
+.demo-form button {
+    line-height: 34px;
+    color: #55ABCD;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;border-radius: 10px;
+}
+.demo-form button:hover {
+    box-shadow: 0 0 40px rgb(82 85 90 / 10%);
+}
+
+@media only screen and (max-width: 1400px) {
+    .demo-form {
+        padding: 16.3% 12%;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .demo-form {
+        line-height: 32px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .demo-form {
+        padding: 14% 8%;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,7 @@
+<!-- <button  [ngClass]="buttonText === 'Edit' ? 'btn btn-success' : 'btn btn-danger'">
+    {{buttonText}}</button> -->
+
+<button class="btn btn-sm px-3 fw-bold me-3" type="button" [disabled]="params.data.dataStatus == true" (click)="onEdit($event)">
+    <i class="fa-regular fa-pen-to-square"></i></button>
+<button class="btn btn-sm px-3 fw-bold me-3" type="button" [disabled]="params.data.dataStatus == true" (click)="onDelete($event)">
+    <i class="fa-regular fa-trash-can"></i></button>

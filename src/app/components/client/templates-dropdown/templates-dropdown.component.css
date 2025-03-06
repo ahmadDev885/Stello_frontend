@@ -1,0 +1,44 @@
+
+.temp_inner ul {
+   padding: 0px;
+   list-style: none;
+   margin: 0;
+   max-height: 350px;
+   overflow: auto;
+   margin-bottom: 4px;
+   padding-right: 4px;
+}
+.temp_inner ul li {
+   border: 1px solid #CBCED4;
+   border-radius: 4px;
+   padding: 4px;
+   margin-bottom: 5px;
+}
+.temp_inner ul li.selected {
+   border: 1px solid #0FB3F1;
+}
+.temp_inner ul li.selected a {
+   color: #0FB3F1;
+}
+.temp_inner ul li a {
+   text-decoration: none;
+   color: #333333;
+   font-size: 14px;
+}
+.temp_inner .temp_insert {
+   font-size: 14px;
+}
+
+.temp_inner ul::-webkit-scrollbar-track {
+   background: linear-gradient(90deg,#434343,#434343 1px,#111 0,#111);
+   border-radius: 16px;
+}
+.temp_inner ul::-webkit-scrollbar-thumb {
+   background: #ebebeb;
+   border-radius: 16px;
+   box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
+}
+.temp_inner ul::-webkit-scrollbar {
+   width: 10px;
+   height: 16px;
+}
